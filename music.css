@@ -1,0 +1,187 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    position: relative;
+}
+
+.container {
+    background: linear-gradient(80deg, #772E25, #C44536);
+    padding: 20px 30px;
+    width: 25em;
+    margin-top: 50px;
+    border-radius: 5px;
+    margin-left: 20rem;
+    box-shadow: 7px  10px 10px 9px  rgb(85, 80, 80);
+    border: #63241b 1px solid;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+}
+
+.heading {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #ec7b47;
+    margin-bottom: 30px;
+}
+
+.artist-name {
+    color: #AFB3B7;
+    margin-bottom: 5px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.buttons {
+    width: 110px;
+    display: flex;
+    margin-bottom: 20px;
+    background: #C44536;
+    padding: 10px 10px;
+    border-radius: 4px;
+    position: relative;
+}
+
+#prev {
+    padding: 3px 10px;
+    margin-right: 2px;
+    border-radius: 4px;
+    background: #923120;
+}
+#play {
+    padding: 3px 6px;
+    margin-right: 2px;
+    border-radius: 4px;
+    background: #923120;
+}
+#pause {
+    padding: 3px 6px;
+    margin-right: 2px;
+    border-radius: 4px;
+    background: #923120;
+    position: absolute;
+    left: 50px;
+    display: none;
+}
+#next {
+    padding: 3px 10px;
+    margin-right: 2px;
+    border-radius: 4px;
+    background: #923120;
+}
+
+.desc-container {
+    background: #C44536;
+    border-radius: 4px;
+    width: 255px;
+    height: 20px;
+}
+
+.desc {
+    font-family: "Roboto Condensed", sans-serif; 
+    z-index: 0;
+    color: rgba(19, 10, 44, 0.521);
+    font-weight: bold;
+    font-size: 10px;
+    /* background: #923120; */
+    position: absolute;
+    height: 5px;
+    width: 300px;
+    top: 22.6em;
+    left: 50em;
+}
+
+/* The animation for moving the song description */
+.move {
+    animation: move;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes move {
+  0% {
+    left: 43em;
+  }
+  50% {
+    left: 50em;
+  }
+  100% {
+    left: 67em;
+  }
+}
+
+.outer-disc-container {
+    width: 170px;
+    height: 170px;
+    background: linear-gradient(270deg, #772E25, #C44536);
+    position: absolute;
+    left: 675px;
+    top: 160px;
+    border-radius: 50%;
+    align-items: center;
+    box-shadow: 9px  8px  7px rgb(20, 20, 20);
+}
+
+/* Animation for the disk */
+.outer-disc {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 500px;
+    margin-left: 11px;
+    margin-right: 5px;
+    background: rgb(23, 36, 36);
+    border-radius: 50%;
+    align-items: center;
+    /* box-shadow: 2px  1px  4px rgb(20, 20, 20); */
+} 
+
+.rotate-disk {
+    animation: rotate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.inner-disc {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(80deg, #63241b, #7c2a1c);
+    margin: 50px 52px;
+    border-radius: 50%;  
+    position: absolute; 
+}
+
+.inner-disc::after {
+    content: '';
+    width: 3px;
+    height: 50px;
+    position: absolute;
+    background: rgb(112, 173, 214);
+    transform: rotate(90deg);
+    left: -27px;
+}
+
+.image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
